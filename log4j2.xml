@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<File name="arquivo" fileName="logs/debug.log" append="true">
+			<PatternLayout pattern=" %d{HH:mm:ss.SSS} [%t] %-5p %c{2} (%F:%L) - %m%n"/>
+		</File>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d %-5p [%t] %C{2} - %m%n"/>
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.winksys.fortress" level="debug">
+			<AppenderRef ref="arquivo"/>
+		</Logger>	
+	</Loggers>
+</Configuration>
